@@ -30,9 +30,17 @@ var reverse = function (x) {
   // split the string
   // reverse the string
   // join the string back together
-  // multiply it with Math.sign() to convert the string to a number and to get the appropriate sign
-  return Math.abs(x).toString().split('').reverse().join('') * Math.sign(x);
-
+  
+  // if the reversed is greater than 32 bit
+    // return 0
+  // else
+    // multiply it with Math.sign() to convert the string to a number and to get the appropriate sign
+  let reversed = Math.abs(x).toString().split('').reverse().join('');
+  if (reversed > 2**31) {
+    return 0
+  } else {
+    return reversed * Math.sign(x);
+  }
 };
 
 let example1 = reverse(123); //321
