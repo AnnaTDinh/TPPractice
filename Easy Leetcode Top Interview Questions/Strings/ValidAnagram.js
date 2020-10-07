@@ -14,8 +14,11 @@ You may assume the string contains only lowercase alphabets.
 */
 
 var isAnagram = function(s, t) {
-  if (s.length !== t.length || (s.length === 0 || t.length === 0)) {
+  if (s.length !== t.length) {
     return false;
+  }
+  if (s.length === 0 || t.length === 0) {
+    return true;
   }
   t = t.split("");
   for (let i = 0; i < s.length; i++) {
@@ -36,7 +39,7 @@ let example1 = isAnagram("anagram", "nagaram"); // true
 let example2 = isAnagram("hello", "elloh"); // true
 let example3 = isAnagram("what", "cool"); // false
 let example4 = isAnagram("hi", "hey"); // false
-let example5 = isAnagram("", ""); // false
+let example5 = isAnagram("", ""); // true
 console.log(example1);
 console.log(example2);
 console.log(example3);
