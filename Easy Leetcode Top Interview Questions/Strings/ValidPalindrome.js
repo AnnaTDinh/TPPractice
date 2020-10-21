@@ -11,15 +11,6 @@ Example 2:
 Input: "race a car"
 Output: false
 
-let example1 = isPalindrome(); // 
-let example2 = isPalindrome(); // 
-let example3 = isPalindrome(); // 
-let example4 = isPalindrome(); // 
-let example5 = isPalindrome(); // 
-console.log(example1);
-console.log(example2);
-console.log(example3);
-console.log(example4);
 */
 var isPalindrome = function(s) {
   if (s.length === 0) {
